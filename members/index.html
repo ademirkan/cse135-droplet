@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link rel="icon" href="../assets/favicon.ico" />
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <!--Placeholder for now-->
+        <link rel="stylesheet" href="index.css" />
+
+        <style>
+            header {
+                position: relative;
+            }
+            main {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
+            main #profile-img {
+                border-radius: 10%;
+            }
+
+            h1 {
+                font-size: 1.75rem;
+                /* This is probably bad. Fix later.*/
+                margin: 0.5rem 20px 0.5rem 0px;
+            }
+
+            #bio-description {
+                text-align: center;
+                margin: 0.5rem 0px;
+                color: var(--alt-text-color);
+                max-width: 300px;
+            }
+
+            #nav-prompts {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                list-style-type: none;
+                column-gap: 30px;
+                row-gap: 10px;
+                padding: 0px;
+                margin: 0px;
+                justify-content: center;
+            }
+
+            /* Animations */
+            #profile-img {
+                animation: fadein ease 1s;
+            }
+
+            h1 {
+                animation: fadein ease 2.5s;
+            }
+
+            h2 {
+                animation: fadein ease 3s;
+            }
+
+            header {
+                animation: dropdown ease 2s;
+            }
+
+            #bio-description {
+                animation: fadein ease 3.5s;
+            }
+
+            #nav-prompts {
+                animation: fadein ease 5s;
+            }
+        </style>
+
+        <title>Arif Demirkan</title>
+    </head>
+
+    <body>
+        <header>
+            <!--Logo placeholder-->
+            <a href="index.html" title="Back to Homepage" id="logo"
+                >Arif Demirkan</a
+            >
+
+            <!-- Navbar -->
+            <nav>
+                <ul id="menu-items">
+                    <li><a href="index.html"> Home </a></li>
+                    <li><a href="portfolio.html">My Work</a></li>
+                    <li>
+                        <a href="mailto:ademirkan@ucsd.edu"> Contact Me </a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <img
+                src="assets/images/pfp.png"
+                alt="A picture of me"
+                height="200px"
+                width="200px"
+                id="profile-img"
+            />
+            <h1>👋 Hello! I’m Arif</h1>
+            <p id="bio-description">
+                Software engineer, web developer, and third year CS student at
+                UCSD.
+            </p>
+
+            <br />
+
+            <!-- BUTTONS -->
+            <ul id="nav-prompts">
+                <li>
+                    <a href="portfolio.html">
+                        <button class="primary-btn">see my work</button>
+                    </a>
+                </li>
+                <li>
+                    <a href="mailto:ademirkan@ucsd.edu">
+                        <!-- Probably not a good way to do this, make it same length some other way -->
+                        <button class="secondary-btn">
+                            &nbsp;contact me&nbsp;
+                        </button>
+                    </a>
+                </li>
+            </ul>
+        </main>
+
+        <footer>
+            <ul>
+                <li>
+                    <a
+                        href="https://github.com/ademirkan"
+                        target="”_blank”"
+                        class="icon github-icon"
+                    >
+                        Github
+                    </a>
+                </li>
+                <li>
+                    <a href="mailto:ademirkan@ucsd.edu" class="icon email-icon">
+                        Email
+                    </a>
+                </li>
+                <li>
+                    <a
+                        href="https://www.linkedin.com/in/arif-demirkan-4403b4242/"
+                        target="”_blank”"
+                        class="icon linkedin-icon"
+                    >
+                        LinkedIn
+                    </a>
+                </li>
+                <li>
+                    <a
+                        href="/assets/resume.pdf"
+                        download
+                        class="icon resume-icon"
+                        >My Resume</a
+                    >
+                </li>
+            </ul>
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link rel="icon" href="../assets/favicon.ico" />
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <!--Placeholder for now-->
+        <link rel="stylesheet" href="index.css" />
+
+        <style>
+            h1 {
+                font-size: 2.5rem;
+            }
+            h2 {
+                font-weight: 600;
+                font-size: x-large;
+                color: var(--primary-color);
+                margin: 0rem 0rem;
+            }
+            h3 {
+                font-weight: 400;
+                margin: 0rem 0rem;
+            }
+
+            main {
+                display: flex;
+                flex-direction: column;
+                gap: 3rem;
+            }
+
+            .timed-element {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                gap: 2rem;
+                margin: 0rem;
+            }
+
+            .timed-element > .time-period {
+                color: var(--alt-text-color);
+                font-size: 0.9rem;
+                font-style: italic;
+                text-align: right;
+            }
+
+            section > ul.section-entries {
+                display: flex;
+                flex-direction: column;
+                list-style-type: none;
+                padding-left: 0px;
+                gap: 3rem;
+            }
+
+            ul.section-entries > li > ul {
+                list-style-type: disc;
+            }
+
+            ul.section-entries > li > ul > li {
+                margin: 0.4rem;
+                color: var(--alt-text-color);
+            }
+
+            @media screen and (max-width: 600px) {
+                h2 {
+                    font-size: large;
+                }
+
+                h3 {
+                    font-size: medium;
+                }
+
+                .timed-element {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    justify-content: space-between;
+                    gap: 0rem;
+                    margin: 0rem;
+                }
+
+                .section-entries a > h2:before {
+                    background-image: url("/assets/images/code-solid.svg");
+                }
+            }
+        </style>
+        <title>Arif's Portfolio</title>
+    </head>
+
+    <body>
+        <header>
+            <!--Logo placeholder-->
+            <a href="index.html" title="Back to Homepage" id="logo"
+                >Arif Demirkan</a
+            >
+
+            <!-- Navbar -->
+            <nav>
+                <ul id="menu-items">
+                    <li><a href="index.html"> Home </a></li>
+                    <li><a href="portfolio.html">My Work</a></li>
+                    <li>
+                        <a href="mailto:ademirkan@ucsd.edu"> Contact Me </a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <!-- Academic History -->
+            <section>
+                <h1>🎓 &nbsp;Education</h1>
+                <ul class="section-entries">
+                    <li>
+                        <div class="timed-element">
+                            <h2>University of California, San Diego</h2>
+                            <span class="time-period">Expected 2023</span>
+                        </div>
+                        <h3>Computer Science BS</h3>
+                        <ul>
+                            <li>3.7 GPA</li>
+                            <li>Revelle Povost Honors</li>
+                            <li>Technical Breadth: UI/UX</li>
+                        </ul>
+                    </li>
+                </ul>
+            </section>
+
+            <!-- Work History -->
+            <section>
+                <h1>💼 &nbsp;Experience</h1>
+
+                <ul class="section-entries">
+                    <!-- COUNSEL HERO -->
+                    <li>
+                        <div class="timed-element">
+                            <h2>Software Engineer, Intern</h2>
+                            <span class="time-period">
+                                Jul. 2022 - Aug. 2022</span
+                            >
+                        </div>
+                        <h3>CounselHero</h3>
+                        <ul>
+                            <li>
+                                Fullstack web developer at career guidance app
+                                used by students and counselors
+                            </li>
+                            <li>
+                                Wrote script to optimize image sizes in backend,
+                                reducing page load time by 44%
+                            </li>
+                            <li>
+                                Developed scraper for university rankings, tool
+                                to automate normalization to database
+                            </li>
+                            <li>
+                                Pioneered search algorithm for over 2500
+                                colleges
+                            </li>
+
+                            <li>
+                                Designed UI mockups for design system
+                                components, implemented in code
+                            </li>
+
+                            <li>
+                                Collaborated with frontend and backend team on
+                                performance improvements and product features
+                                for MVP
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </section>
+
+            <!-- Personal Projects -->
+            <section>
+                <h1>📦 &nbsp;Projects</h1>
+
+                <ul class="section-entries">
+                    <!-- Deepflow -->
+                    <li>
+                        <div class="timed-element">
+                            <a
+                                href="https://deep-flow.vercel.app/"
+                                target="_blank"
+                            >
+                                <h2 className="icon link-icon">Deepflow</h2>
+                            </a>
+                            <span class="time-period"> 05/2022 - Present </span>
+                        </div>
+                        <h3>
+                            React, JavaScript, Vercel, NodeJS, Express, MongoDB
+                        </h3>
+                        <ul>
+                            <li>
+                                Webapp that allows user to measure and improve
+                                productivity
+                            </li>
+                            <li>
+                                Created reusable React hooks and components to
+                                implement timer with millisecond accuracy
+                            </li>
+                            <li>
+                                Maintained user preferences and state using
+                                React Context, persisted to local storage
+                            </li>
+                            <li>
+                                Utilized Solid design patterns to create
+                                reusable components and well documented APIs
+                            </li>
+                        </ul>
+                    </li>
+
+                    <!-- Birds of a Feather -->
+                    <li>
+                        <div class="timed-element">
+                            <h2>Birds of a Feather</h2>
+                            <span class="time-period"> (Near future) </span>
+                        </div>
+
+                        <h3>
+                            Android Studio, Java, JUnit, Espresso, MVC,
+                            Bluetooth
+                        </h3>
+                        <ul>
+                            <li>
+                                Android application that allows University
+                                students to get in touch with classmates from
+                                previous courses
+                            </li>
+                            <li>
+                                Utilized Agile methodology with team to deliver
+                                MVP on time via project planning, stand-ups, and
+                                iterations
+                            </li>
+                            <li>
+                                Retrieved student information from nearby
+                                devices via Bluetooth and persisted in local
+                                storage
+                            </li>
+                            <li>
+                                Created algorithm to sort students by number of
+                                mutual classes
+                            </li>
+                        </ul>
+                    </li>
+
+                    <!-- URL Lab -->
+                    <li>
+                        <div class="timed-element">
+                            <h2>URL Lab</h2>
+                            <span class="time-period"> (Near future) </span>
+                        </div>
+
+                        <h3>Django, SQLite, Python, RESTful API</h3>
+                        <ul>
+                            <li>Web service to shorten URL to a given name</li>
+                            <li>
+                                Designed RESTful APIs for CRUD operations on a
+                                relational database
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <h2>... and many more in the pipeline!</h2>
+                        <!-- <ul>
+              <li>Two Day Rule -- habit accountability app</li>
+              FairChess
+              MinimalYoutube
+              <li>...</li>
+            </ul> -->
+                    </li>
+                </ul>
+            </section>
+        </main>
+
+        <footer>
+            <ul>
+                <li>
+                    <a href="https://github.com/ademirkan" target="”_blank”">
+                        Github
+                    </a>
+                </li>
+                <li><a href="mailto:ademirkan@ucsd.edu"> Email </a></li>
+                <li>
+                    <a
+                        href="https://www.linkedin.com/in/arif-demirkan-4403b4242/"
+                        target="”_blank”"
+                    >
+                        LinkedIn
+                    </a>
+                </li>
+                <li><a href="/assets/resume.pdf" download>My Resume</a></li>
+            </ul>
+        </footer>
+    </body>
+</html>

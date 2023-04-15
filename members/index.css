@@ -1,0 +1,183 @@
+@font-face {
+  font-family: "Poppins";
+  src: url("/assets/fonts/Poppins/Poppins-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Poppins Bold";
+  src: url("/assets/fonts/Poppins/Poppins-Medium.ttf");
+}
+
+* {
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+  color: var(--text-color);
+
+  transition: 150ms ease-in-out;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-color: white;
+  --alt-bg-color: black;
+
+  --primary-color: rgb(11, 211, 186);
+  --primary-shadow: rgba(11, 211, 186, 0.3);
+  --bg-shadow: rgba(0, 0, 0, 0.2);
+
+  --text-color: rgb(24, 24, 24);
+  --alt-text-color: rgb(125, 125, 125);
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  display: grid;
+  grid-template-areas:
+    "navbar"
+    "main"
+    "footer";
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+  gap: 2rem;
+  margin: auto;
+  padding: 2rem;
+  width: min(100vw, 800px);
+  background-color: var(--bg-color);
+}
+
+/*   N A V B A R    S T Y L I N G   */
+header {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+}
+
+#logo {
+  font-family: "Poppins Bold", Arial, Helvetica, sans-serif;
+  font-size: x-large;
+}
+
+#logo:hover {
+  color: var(--primary-color);
+}
+
+nav {
+  position: relative;
+}
+
+nav > ul#menu-items {
+  display: flex;
+  list-style-type: none;
+  flex-direction: row;
+  justify-content: flex-end;
+  gap: 20px;
+}
+
+nav > ul#menu-items > li > *:hover {
+  color: var(--primary-color);
+}
+
+@media screen and (max-width: 600px) {
+  nav {
+    display: none;
+  }
+}
+
+button {
+  border: 0px;
+  padding: 10px 30px;
+  font-size: large;
+}
+
+button:hover {
+  cursor: pointer;
+  transform: scale(1.025);
+}
+
+button.primary-btn {
+  background-color: var(--primary-color);
+  color: var(--bg-color);
+  filter: drop-shadow(0px 0px 16px var(--primary-shadow));
+}
+
+button.secondary-btn {
+  background-color: var(--bg-color);
+  filter: drop-shadow(0px 4px 16px var(--bg-shadow));
+}
+
+footer > ul {
+  margin: 0px;
+  padding: 0px;
+  display: flex;
+  list-style-type: none;
+  flex-direction: row;
+  justify-content: center;
+  gap: 20px;
+  color: var(--alt-text-color);
+  flex-wrap: wrap;
+}
+
+footer > ul > li > *:hover {
+  text-decoration: underline;
+}
+
+.icon::before {
+  background-repeat: no-repeat;
+  background-size: 100%;
+  content: "";
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  margin: 0px 5px;
+}
+
+.link-icon::before {
+  background-image: url("/assets/images/code-solid.svg");
+}
+
+.github-icon::before {
+  background-image: url("/assets/images/code-solid.svg");
+}
+
+.email-icon::before {
+  background-image: url("/assets/images/envelope-solid.svg");
+}
+
+.linkedin-icon::before {
+  background-image: url("/assets/images/linkedin-brands.svg");
+}
+
+.resume-icon::before {
+  background-image: url("/assets/images/file-arrow-down-solid.svg");
+}
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+
+  33% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes dropdown {
+  0% {
+    top: -4rem;
+    opacity: 0;
+  }
+
+  33% {
+    top: 0rem;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
