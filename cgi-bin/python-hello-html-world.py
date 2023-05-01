@@ -5,6 +5,7 @@ from datetime import datetime
 print("Cache-Control: no-cache")
 print("Content-type: text/html\n")
 
+print("<!DOCTYPE html>")
 print("<html>")
 
 print("<head>")
